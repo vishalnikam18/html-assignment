@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronica Creators</title>
+    <script>
+        //code to display the receipt 
+        function receipt()
+        {
+            var name = document.getElementById('name').value;
+            var music = document.getElementById('music').value;
+            var price = document.getElementById('price').value;
+            var discount= document.getElementById('discount').value;
+            var finalprice = price - ((price/100)*discount);
+            alert("Thank for shopping with us customer name : "+name+" music :"+music+" price ="+price+" Discount appiled = "+discount+" Final Price="+finalprice);
+        }
+    </script>
+</head>
+<body>
+    <h2>Payment Page</h2>
+    <!-- form to enter the data -->
+    <form style="text-align: center;">
+        <table>
+            <tr>
+                <td>
+                   Enter Customer Name :
+                </td>
+                <td>
+                    <input id="name" type="text" placeholder="John" required autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Selected music :
+                </td>
+                <td>
+                    <input type="checkbox" id="music" name="pop" value="pop">POP<br>
+                    <input type="checkbox" id="music" name="jazz" value="jazz">Jazz<br>
+                    <input type="checkbox" id="music" name="romantic" value="romantic">Romantic<br>
+                    <input type="checkbox" id="music" name="romantic" value="traditional">Traditional<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter the final price
+                </td>
+                <td>
+                    <input id="price" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter the discount to apply
+                </td>
+                <td>
+                    <input id="discount" type="number" min="5" max="20">
+                </td>
+            </tr>
+                <tr>
+                    <td></td>
+                <td>
+                    <input type="submit" onclick="receipt()">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+    
+</body>
+</html>

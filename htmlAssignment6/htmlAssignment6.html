@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Oxem Technologies
+    </title>
+
+    <style>
+        div {
+            height: 100px;
+            width: 100%;
+        }
+
+
+        .mainhead {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .myCanvas {
+            position: relative;
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+        }
+
+        img {
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div>
+        <canvas id="myCanvas" class="myCanvas"></canvas>
+        <h2>
+            Oxame Technologies
+        </h2>
+    </div>
+
+
+    <script>
+        //RAINBOW CREATION
+
+        var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+        var arcWidth = 10;
+        var radius = 8 * arcWidth;
+
+        var var1 = document.getElementById("myCanvas");
+        var context = var1.getContext("2d");
+        var1.width = (radius + (colors.length - 0.5) * arcWidth) * 2;
+        var1.height = (radius + (colors.length - 1) * arcWidth);
+
+        var drawArc = function (color) {
+            context.beginPath();
+            context.arc(
+                var1.width / 2,
+                var1.height + arcWidth / 2,
+                radius,
+                Math.PI,
+                2 * Math.PI
+            );
+            context.lineWidth = arcWidth;
+            context.strokeStyle = color;
+            context.stroke();
+            context.closePath();
+            radius += arcWidth;
+        };
+
+        colors.reverse().forEach(drawArc);
+
+
+
+
+    </script>
+    <img src="./hyundai.png">
+    <br>
+    <img src="./hyundai_car.jpg">
+    <br>
+    <img src="./hyundai_newposibilities.png">
+    <br>
+</body>
+
+</html>

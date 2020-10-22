@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronica Creators</title>
+    <script>
+        //code to check password is correct
+        function checkpass()
+        {
+            var password = document.getElementById('pass').value;
+            var cpassword = document.getElementById('cpass').value;
+            if(password != cpassword)
+            {
+                alert("password dont match try again!!!");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form style="text-align: center;">
+        <table>
+            <tr>
+                <td>
+                   Enter your Name :
+                </td>
+                <td>
+                    <input type="text" placeholder="John" required autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 Enter your Email Id
+                </td>
+                <td>
+                    <input type="email" placeholder="johnd@something.com" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Enter your Mobile Number :
+                </td>
+                <td>
+                    <input type="tel" required pattern="[1-9] + [0-9]{9}" maxlength="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Favourite Musics :
+                </td>
+                <td>
+                    <select name="music">
+                        <option value="romantics" >Romantic</option>
+                        <option value="PoP">POP</option>
+                        <option value="jazz" selected>Jazz</option>
+                        <option value="traditional">Traditional</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter a username
+                </td>
+                <td>
+                    <input type="text" maxlength="6">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Password
+                </td>
+                <td>
+                    <input id="pass" type="password" maxlength="6">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Confirm Password
+                </td>
+                <td>
+                    <input id="cpass" type="password" maxlength="6" onblur="checkpass()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
